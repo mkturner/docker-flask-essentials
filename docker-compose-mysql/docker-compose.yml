@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+      build: .
+      ports: 
+        - "5000:5000"
+      volumes:
+        - /Users/marvin/Code/docker-compose-mysql:/counter_app
+      links:
+        - db:mysql
+      container_name: counterapp_web_1
+      depends_on:
+        - db
+
+  db:
+    image: mariadb:10.5.11
+    restart: always
+    container_name: counterapp_db_1
+    environment: 
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: counter
