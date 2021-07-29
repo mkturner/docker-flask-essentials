@@ -7,4 +7,4 @@ This repo is meant to store code & notes from the [Essential Docker for Python F
 - incorporating a production quality server like gunicorn
 - Running databases in separate containers using swarm
 - Using services to allow conrainers to talk
-- Using pdb to inspect values
+- Using pdb to debug by inspecting values
